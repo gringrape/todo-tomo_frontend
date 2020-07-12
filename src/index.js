@@ -1,3 +1,8 @@
-import * as R from 'ramda';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-console.log(R.range(1, 6));
+ReactDOM.render(
+  <h1>Hello, React!</h1>,
+  document.getElementById('root')
+);

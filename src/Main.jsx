@@ -1,5 +1,7 @@
 import React from 'react';
 import LandingPage from './LandingPage';
+import MainPage from './MainPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Main = () => {
 	// routing 등의 기능을 담당할 component
@@ -9,18 +11,21 @@ const Main = () => {
 		position: 'absolute',
 		top: '50%',
 		left: '50%',
-    transform: 'translate(-50%, -50%)',
-    boxShadow: '0 0 2rem gray'
-  };
-  
-  const backgroundShapeStyle = {
-    position: 'absolute',
-    bottom: '-3.8px'
-  };
+		transform: 'translate(-50%, -50%)',
+		boxShadow: '0 0 2rem gray'
+	};
+
+	const backgroundShapeStyle = {
+		position: 'absolute',
+		bottom: '-3.8px'
+	};
 
 	return (
 		<div className="container" style={containerStyle}>
-			<LandingPage />
+			<Router>
+				<Route exact path="/" component={LandingPage} />
+				<Route exact path="/main" component={MainPage} />
+			</Router>
 			<div className="background-shape" style={backgroundShapeStyle}>
 				<svg width="375" height="412" viewBox="0 0 375 412" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path

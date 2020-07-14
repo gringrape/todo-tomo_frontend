@@ -1,0 +1,9 @@
+.task {
+  width: 100%;
+  height: 4.4rem;
+  box-shadow: 0 0 1rem lightgray;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+}

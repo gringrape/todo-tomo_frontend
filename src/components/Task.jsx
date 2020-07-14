@@ -1,27 +1,12 @@
 import React from 'react';
-import Radium from 'radium';
-
-const taskBoxStyle = {
-  width: '100%',
-  height: '4.4rem',
-  boxShadow: '0 0 1rem lightgray',
-  ':hover': {
-    color: 'red'
-  },
-  ':firstChild': {
-    color: 'red'
-  }
-};
-
+import { task } from './Task.module.scss';
 
 const Task = () => {
   return (
-    <div style={taskBoxStyle}>
+    <div className={task}>
       할일
     </div>
   );
 };
 
-const StyledTask = Radium(Task);
-
-export default StyledTask;
+export default Task; 
